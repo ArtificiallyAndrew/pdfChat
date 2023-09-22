@@ -26,7 +26,7 @@ import tiktoken
 from PIL import Image
 
 
-st.title("Chat with NYU PDF")
+st.title("CFA PDF Chatbot")
 def process_pdf(file_path):
     pdf_reader = PdfReader(file_path)
     text = ""
@@ -41,9 +41,9 @@ def generate_response(chain, history, query):
 
 def main():
     os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
-    st.write("Upload a PDF file:")
+    st.write("A chat bot with PDF analysis skills can help you find important information in PDF files by answering questions you ask it. ")
     pdf_file = st.file_uploader("Choose a PDF file", type="pdf")
-    query = st.text_input("Enter a question:", "")
+    query = st.text_input("Enter a question or ask to summarize:", "")
     
     if pdf_file is not None:
         text = process_pdf(pdf_file)
