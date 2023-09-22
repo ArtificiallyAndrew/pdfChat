@@ -25,7 +25,7 @@ import os
 from PIL import Image
 
 
-st.title("Chat with your PDF 💬")
+st.title("Chat with NYU PDF")
 def process_pdf(file_path):
     pdf_reader = PdfReader(file_path)
     text = ""
