@@ -22,6 +22,7 @@ from langchain.prompts.chat import (
 
 import streamlit as st
 import os
+import tiktoken
 from PIL import Image
 
 
