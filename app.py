@@ -71,3 +71,22 @@ def main():
 if __name__ == "__main__":
     main()
            
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            header {visibility: hidden;}
+            footer {visibility: hidden;}
+            footer: after {
+	        content:'iTLAB  -  2023'; 
+	        visibility: visible;
+	        display: block;
+	        position: relative;
+	        #background-color: purple;
+	        padding: 5px;
+	        top: 2px;
+}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
+
