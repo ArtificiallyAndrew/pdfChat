@@ -59,7 +59,7 @@ def main():
             SystemMessagePromptTemplate.from_template(general_system_template),
             ]
         qa_prompt = ChatPromptTemplate.from_messages( messages )
-        chain = ConversationalRetrievalChain.from_llm(ChatOpenAI(model_name="gpt-3.5-turbo",max_tokens=4000,temperature=0.3,streaming=True),retriever=vectorstore.as_retriever(),memory=memory)
+        chain = ConversationalRetrievalChain.from_llm(ChatOpenAI(model_name="gpt-4",max_tokens=4000,temperature=0.3,streaming=True),retriever=vectorstore.as_retriever(),memory=memory)
         
         if query: # if there's a user query
               history = [] # Initialize chat history, you can modify this based on your needs
